@@ -38,4 +38,16 @@ package lectures.week1basics
   val aFloat = 2.0F  // можно использовать F или f
   val aDouble = 2.0
   val aBoolean = true
+
+  // ------- Тип Unit -------
+
+  // Есть еще один тип переменной - Unit. Он возвращается функциями, которые "ничего не возвращают"
+  // Что-то вроде заглушки наподобие void
+  val aUnit = print("I just want to print")
+  val bUnit: Unit = print("I just want to print")  // лучше тип указывать явно, а то компилятор ругается
+
+  println(aUnit)  // выведется ()
+
+  // При этом в Java нет типа Unit, а есть void. Поэтому при использовании getClass:
+  println(aUnit.getClass)  // выведется void, а не Unit
 }
