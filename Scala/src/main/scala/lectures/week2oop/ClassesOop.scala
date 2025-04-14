@@ -72,6 +72,7 @@ package lectures.week2oop
   println(student2.last_name)  // зато сможем обратиться к переменной
   // println(student2.secret_key) // если только она не обозначена как private
 
+
   // 5. Если внутри класса прописать какие-то действия, то они выполнятся в момент вызова конструктора:
 
   class Student3(id: Int, val name: String) {
@@ -85,5 +86,54 @@ package lectures.week2oop
   // Kate
 
 
+  // ------------
+  // Наследование
+  // ------------
+
+  // Наследование позволяет создать новый (производный) класс на основе уже существующего (базового) класса.
+  // Производный класс получает доступ ко всем полям и методам базового класса, кроме отмеченных private
+
+  class Employee {
+    def talk(msg: String): Unit = println(s"Employee says: $msg")
+  }
+
+  class Manager extends Employee
+
+  val manager = new Manager
+
+  manager.talk("hello")
+
+  // 1. private и protected
+  // private переменные и методы доступны только внутри класса, в котором они определены.
+  // protected - доступны внутри класса, в котором определены, а также в производных от него классах.
+
+  class Employee1 {
+    protected def talk(msg: String): Unit = println(s"Employee says: $msg")
+    private val secret = 123
+  }
+
+  class Manager1 extends Employee1 {
+    // protected метод talk доступен в подклассе
+    def speak(msg: String): Unit = talk(msg)
+
+    // println(secret) - private переменная недоступна в подклассе
+  }
+
+  val manager1 = new Manager1
+
+  // manager1.talk("hello") - protected метод talk недоступен вне классов
+  // println(manager1.secret) - private переменная недоступна вне классов
+  // println(employee1.secret) - private переменная недоступна вне классов
+
+
+  // 2. Параметры наследуемого класса
+  // У производного класса должны быть указаны параметры базового класса.
+  // (Дополнительные параметры тоже можно указывать, но параметры базового класса обязательны)
+
+  class Employee2(name: String)
+
+  // class Manager2 extends Employee2 - ошибка
+  class Manager2(name: String) extends Employee2(name)  // не ошибка
+  class Manager3(name: String, emp_id: Int) extends Employee2(name)  // тоже не ошибка
 
 }
