@@ -1,6 +1,11 @@
-# В этой директории я изучаю Python. 
+# В этой директории я изучаю Python
 
-### Структура директорий и файлов:
+## Источники
+Этот мануал пишется по нескольким курсам (а также другой документации, загугленной в процессе):
+1. Курс от ВШЭ на coursera: https://www.coursera.org/learn/python-osnovy-programmirovaniya/
+2. Курс на code basics: https://code-basics.com/ru/languages/python
+
+## Структура директорий и файлов:
 - basics
   - basics.py _- начальные знания_
   - variables_type_conversions.py _- преобразование типов и переменные_
