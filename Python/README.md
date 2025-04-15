@@ -8,11 +8,13 @@
 ## Структура директорий и файлов:
 - basics
   - basics.py _- начальные знания_
+  - files.py _- работа с файлами_
   - variables_type_conversions.py _- преобразование типов и переменные_
 - data_types _- типы данных_
   - bool.py _- логический тип данных_
   - float.py _- вещественный тип данных_
   - lists.py _- списки_
+  - sets.py _- множества_
   - strings.py _- строки_
   - tuples.py _- кортежи_
 - functions
