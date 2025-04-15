@@ -42,24 +42,24 @@ print(b)    # => [1, 2]
 # Следовательно, функция может изменить значения внутри списка:
 
 
-def replaceFirst(myList):
-    myList[0] = 'x'
+def replace_first(my_list):
+    my_list[0] = 'x'
 
 
-nowList = list('abcdef')
-replaceFirst(nowList)   # => ['x', 'b', 'c', 'd', 'e', 'f']
-print(nowList)
+now_list = list('abcdef')
+replace_first(now_list)   # => ['x', 'b', 'c', 'd', 'e', 'f']
+print(now_list)
 
 
 # Саму ссылку функция изменить не сможет:
 
-def reverseList(funcList):
-    funcList = funcList[::-1]   # Операция среза создает новый объект
+def reverse_list(func_list):
+    func_list = func_list[::-1]   # Операция среза создает новый объект
 
 
-mainList = list('abc')
-reverseList(mainList)   # => ['a', 'b', 'c']. Список не изменился
-print(mainList)
+main_list = list('abc')
+reverse_list(main_list)   # => ['a', 'b', 'c']. Список не изменился
+print(main_list)
 
 # --------------------------
 # -- Преобразование типов --
@@ -116,11 +116,11 @@ print(sorted(strings, key=len))  # => ['c', 'b', 'abb']
 # Например, если мы хотим отсортировать оценки от 0 до 10, то может оказаться эффективнее подсчитать,
 # сколько раз встречалась каждая из оценок и затем вывести её столько раз:
 marks = map(int, input().split())
-cntMarks = [0] * 11  # список из 11 нулей в 1 строку
+cnt_marks = [0] * 11  # список из 11 нулей в 1 строку
 for mark in marks:
-    cntMarks[mark] += 1
-for nowMark in range(11):
-    print((str(nowMark) + ' ') * cntMarks[nowMark], end='')
+    cnt_marks[mark] += 1
+for now_mark in range(11):
+    print((str(now_mark) + ' ') * cnt_marks[now_mark], end='')
 # Input:  4 5 2 1 2 6
 # Output: 1 2 2 4 5 6
 
