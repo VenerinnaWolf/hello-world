@@ -12,6 +12,7 @@
   - variables_type_conversions.py _- преобразование типов и переменные_
 - data_types _- типы данных_
   - bool.py _- логический тип данных_
+  - dicts.py _- словари_
   - float.py _- вещественный тип данных_
   - lists.py _- списки_
   - sets.py _- множества_
