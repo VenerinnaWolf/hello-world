@@ -47,12 +47,28 @@ class Complex:
             re = self.re * other
             im = self.im * other
 
+        else:  # иначе будем выбрасывать ошибку с помощью созданного нами класса ComplexError (ниже)
+            error = ComplexMultError("Multiplication error", self, other)  # конструируем объект класса - ошибку
+            raise error  # выбрасываем исключение
         return Complex(re, im)
 
     # г) Метод * для `правого` умножения (когда что-то умножается на текущий объект)
     # other * self вызывает метод other.__rmul__(self), если не удалось вызвать обычный __mul__
     # Но мы не будем писать def __rmul__(self, other). Т.к. он идентичен обычному умножению, мы напишем так:
     __rmul__ = __mul__
+
+# -----------------------
+# -- Обработчик ошибок --
+# -----------------------
+
+# Создадим класс для обработки ошибок умножения в нашем классе.
+# Нужно обязательно указывать, что он наследуется от BaseException
+
+class ComplexMultError(Exception):
+    def __init__(self, message, complex, other):
+        self.message = message
+        self.arg1 = complex
+        self.arg2 = other
 
 # -----------------------
 # -- Экземпляры класса --
@@ -74,13 +90,23 @@ print(c)  # => 2 + 0i
 
 # б) метод + = __add__ для сложения двух объектов:
 print(b + c)  # => 3 + 2i
-# print(b + 1)  # => Ошибка, наш метод add работает только с двумя объектами типа Complex
+print(b + 1)  # => Ошибка, наш метод add работает только с двумя объектами типа Complex
 
 # в) метод * = __mul__ для умножения двух объектов:
 print(b * c)  # => 2 + 4i
 print(b * 3)  # => 3 + 6i, т.е. работает и с целыми числами
 print(b * 0.5)  # => 0.5 + 1.0i, т.е. работает и с вещественными числами
-print(b * "abc")  # => 0 + 0i, прямо сейчас ошибки не выводится, хотя по идее на строку умножать нельзя
 
 # г) метод * = __rmul__ правое умножение:
 print(3 * b)  # => 3 + 6i
+
+# 4. Обработка исключений
+
+# Мы можем просто написать строку с ошибкой:
+print(b * "abc")  # => ошибка ComplexMultError: ('Multiplication error', <__main__.Complex object at 0x00000294CAC14F50>, 'abc')
+
+# А можем написать блок try ... except, чтобы программа не останавливала свою работу.
+try:
+    print(b * "abc")
+except ComplexMultError as ce:
+    print(f'Multiplication error. Arguments: {ce.arg1}, {ce.arg2}')
