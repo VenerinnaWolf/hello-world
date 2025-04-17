@@ -25,6 +25,7 @@
   - itertools_functools.py _- библиотеки itertools и functools_
 - oop _- объектно-ориентированное программирование_
   - objects.py _- объекты_
+  - classes.py _- классы_
 - operators _- операторы и циклы_
   - for.py _- цикл for_
   - if_else.py _- оператор if-else_
