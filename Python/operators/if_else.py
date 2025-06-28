@@ -40,3 +40,11 @@ elif number == 2:
     print('Two')
 else:
     print('Other')
+
+# -------------------------
+# -- Тернарный оператор  --
+# -- ... if ... else ... --
+# -------------------------
+
+print('YES' if 5 > 1 else 'NO')
+x = 'YES' if 5 > 1 else 'NO'

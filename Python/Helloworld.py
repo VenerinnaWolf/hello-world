@@ -1,29 +1,26 @@
-import os
-from pathlib import Path
+# Однострочники
 
-print("Hello, world!")
-print(os.system('tree'))
+# Напишите программу вывода на экран трёх последовательно идущих чисел, каждое на отдельной строке.
+# Первое число вводит пользователь, остальные числа вы должны сами вычислять в программе.
+print(a := int(input()), a+1, a+2, sep='\n')  # решение для Python 3.8 и выше
+[print(i, i+1, i+2, sep='\n') for i in [int(input())]]
+print(*[[i, i+1, i+2] for i in [int(input())]][0], sep='\n')
+(lambda i: print(i, i+1, i+2, sep='\n'))(int(input()))
 
+# Напишите программу, которая проверяет, что для заданного четырехзначного числа выполняется следующее соотношение:
+# сумма первой и последней цифр равна разности второй и третьей цифр.
+[print('ДА' if int(a[0]) + int(a[3]) == int(a[1]) - int(a[2]) else 'НЕТ') for a in [input()]]
+[print('ДА' if a[0] + a[3] == a[1] - a[2] else 'НЕТ') for a in [list(map(int, input()))]]
 
-fork_string   = '├──'
-corner_string = '└──'
-wall_string   = '│  '
-space_string  = '   '
+# Напишите программу, которая определяет, являются ли три заданных числа (в указанном порядке) последовательными членами арифметической прогрессии.
+[print('YES' if b - a == c - b else 'NO') for a, b, c in [[int(input()) for _ in range(3)]]]
+(lambda a, b, c: print('YES' if b - a == c - b else 'NO'))(*(int(input()) for _ in range(3)))
 
-def drawtree(path, seen, head='', tail=''):
-    if path.is_dir() and path.resolve() not in seen:
-        yield head + path.name
-        seen.add(path.resolve()) # на случай зацикленных ссылок
-        entries = sorted(filter(Path.is_dir, path.iterdir()))
+# ------ Это решение мне прям нравится -------
+# Напишите программу, которая считывает три числа и подсчитывает сумму только положительных чисел.
+print(sum(max(int(input()), 0) for _ in range(3)))
 
-        for i, entry in enumerate(entries):
-            if i < len(entries) - 1:
-                yield from drawtree(entry, seen, tail + fork_string, tail + wall_string)
-            else:
-                yield from drawtree(entry, seen, tail + corner_string, tail + space_string)
-
-def tree(my_path='.'):
-    for line in drawtree(Path(my_path), set()):
-        print(line)
-
-tree('root')
+# Назовём число красивым, если оно является четырёхзначным и делится нацело на 7 или на 17
+# Напишите программу, определяющую, является ли введённое число красивым.
+# Программа должна вывести «YES» (без кавычек), если число является красивым, или «NO» (без кавычек) в противном случае.
+[print('YES' if len(a) == 4 and (int(a) % 7 == 0 or int(a) % 17 == 0) else 'NO') for a in [input()]]

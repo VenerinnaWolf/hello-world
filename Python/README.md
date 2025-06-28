@@ -2,9 +2,10 @@
 
 ## Источники
 Этот мануал пишется по нескольким курсам (а также другой документации, загугленной в процессе):
-1. Курс от ВШЭ на coursera: https://www.coursera.org/learn/python-osnovy-programmirovaniya/
-2. Курс на code basics: https://code-basics.com/ru/languages/python
-3. Курс на Neostudy
+1. Курс от `ВШЭ` на `coursera`: https://www.coursera.org/learn/python-osnovy-programmirovaniya/
+2. Курс `"Поколение Python" для начинающих` на `Stepic`: https://stepik.org/course/58852/syllabus
+3. Курс на `code basics`: https://code-basics.com/ru/languages/python
+4. Курс на `Neostudy`
 
 ## Структура директорий и файлов:
 - `basics`
@@ -29,7 +30,8 @@
   - `objects.py` _- общая информация про объекты_
   - `classes.py` _- классы_
 - `operators` _- операторы и циклы_
+  - `basic_operators` _- арифметические, логические, битовые операторы. Приоритеты операторов_
   - `for.py` _- цикл for_
   - `if_else.py` _- оператор if-else_
   - `while.py` _- цикл while_
-- `practice` _- практические задания_
+- `practice` _- практические задания с курсов и не только_
