@@ -26,10 +26,11 @@ range(10, 0, -2)  # => 10, 8, 6, 4, 2
 # -- Цикл: for --
 # ---------------
 
-# Цикл for перебирает элементы tuple или iterable
+# Цикл for перебирает элементы итерируемого объекта (кортеж, список, строка и в т.ч. генератор range)
 
 for color in ('red', 'green', 'yellow'):
     print(color, 'apple')
+# Напечатает:
 # red apple
 # green apple
 # yellow apple
@@ -43,3 +44,9 @@ for i in range(1, 11):
         print(i * j, end=' ')
     print()
 # Напечатает таблицу умножения
+
+# -- Если переменная цикла не используется в самом цикле, ее можно пропустить, написав _
+
+for _ in range(5):
+    print('Hello, world!')
+# Напечатает 5 раз Hello, world!
