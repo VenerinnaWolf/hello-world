@@ -1,0 +1,94 @@
+{
+    "extract": {
+        "node_id": 1,
+        "children": [
+            "transform_1"
+        ]
+    },
+    "transform_1": {
+        "node_id": 2,
+        "children": [
+            "transform_2",
+            "transform_3"
+        ]
+    },
+    "transform_2": {
+        "node_id": 3,
+        "children": [
+            "load",
+            "transform_4"
+        ]
+    },
+    "load": {
+        "node_id": 4,
+        "children": [
+            "transform_3"
+        ]
+    },
+    "transform_3": {
+        "node_id": 5,
+        "children": [
+            "transform_4",
+            "validate"
+        ]
+    },
+    "transform_4": {
+        "node_id": 6,
+        "children": [
+            "validate",
+            "aggregate"
+        ]
+    },
+    "validate": {
+        "node_id": 7,
+        "children": [
+            "aggregate",
+            "filter"
+        ]
+    },
+    "aggregate": {
+        "node_id": 8,
+        "children": [
+            "filter",
+            "enrich"
+        ]
+    },
+    "filter": {
+        "node_id": 9,
+        "children": [
+            "enrich",
+            "normalize"
+        ]
+    },
+    "enrich": {
+        "node_id": 10,
+        "children": [
+            "normalize",
+            "cleanse"
+        ]
+    },
+    "normalize": {
+        "node_id": 11,
+        "children": [
+            "cleanse",
+            "aggregate_2"
+        ]
+    },
+    "cleanse": {
+        "node_id": 12,
+        "children": [
+            "aggregate_2",
+            "finalize"
+        ]
+    },
+    "aggregate_2": {
+        "node_id": 13,
+        "children": [
+            "finalize"
+        ]
+    },
+    "finalize": {
+        "node_id": 14,
+        "children": []
+    }
+}

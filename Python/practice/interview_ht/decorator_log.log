@@ -1,0 +1,18 @@
+__main__.file 2025-07-13 21:05:25,482 INFO - Calling function add() with args: (1, 2), kwargs: {}
+__main__.file 2025-07-13 21:05:25,584 INFO - Function add() execution time: 0.1012 seconds
+__main__.file 2025-07-13 21:05:25,584 INFO - Function add() was called 1 times
+__main__.file 2025-07-13 21:05:25,584 INFO - Calling function add() with args: (3, 4), kwargs: {}
+__main__.file 2025-07-13 21:05:25,684 INFO - Function add() execution time: 0.1007 seconds
+__main__.file 2025-07-13 21:05:25,684 INFO - Function add() was called 2 times
+__main__.file 2025-07-13 21:05:25,888 INFO - Calling function mult() with args: (1, 2), kwargs: {}
+__main__.file 2025-07-13 21:05:26,389 INFO - Function mult() execution time: 0.5017 seconds
+__main__.file 2025-07-13 21:05:26,389 INFO - Function mult() was called 1 times
+__main__.file 2025-07-13 21:05:26,389 INFO - Calling function mult() with args: (3, 4), kwargs: {}
+__main__.file 2025-07-13 21:05:26,891 INFO - Function mult() execution time: 0.5016 seconds
+__main__.file 2025-07-13 21:05:26,891 INFO - Function mult() was called 2 times
+__main__.file 2025-07-13 21:16:54,507 INFO - Calling function add() with args: (1, 2), kwargs: {}
+__main__.file 2025-07-13 21:16:54,507 INFO - Function add() execution time: 0.0 seconds
+__main__.file 2025-07-13 21:16:54,507 INFO - Function add() was called 1 times
+__main__.file 2025-07-13 21:16:54,507 INFO - Calling function add() with args: (3, 4), kwargs: {}
+__main__.file 2025-07-13 21:16:54,507 INFO - Function add() execution time: 0.0 seconds
+__main__.file 2025-07-13 21:16:54,507 INFO - Function add() was called 2 times

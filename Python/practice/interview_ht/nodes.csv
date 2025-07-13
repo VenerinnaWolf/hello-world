@@ -1,0 +1,15 @@
+id,name
+1,extract
+2,transform_1
+3,transform_2
+4,load
+5,transform_3
+6,transform_4
+7,validate
+8,aggregate
+9,filter
+10,enrich
+11,normalize
+12,cleanse
+13,aggregate_2
+14,finalize
